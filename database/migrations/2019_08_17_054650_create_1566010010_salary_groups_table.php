@@ -19,14 +19,14 @@ class Create1566010010SalaryGroupsTable extends Migration
                 $table->integer('maximum_leave_days')->nullable()->unsigned();
                 $table->double('basic_salary', 4, 2)->nullable();
                 $table->double('ot_rate', 4, 2)->nullable();
-                
+
                 $table->timestamps();
                 $table->softDeletes();
 
-                $table->index(['deleted_at'])->nullable();
+                $table->index(['deleted_at']);
             });
 
-           
+
         }
     }
 

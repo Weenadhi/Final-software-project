@@ -1,0 +1,58 @@
+<?php
+
+namespace App\Imports;
+use App\Employee;
+use App\EmployeeFund;
+use App\EmployeeAttendance;
+use App\Allowance;
+use App\Deduction;
+use App\Advance;
+use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
+
+class UsersImport implements ToModel, WithHeadingRow
+{
+    /**
+    * @param array $row
+    *
+    * @return \Illuminate\Database\Eloquent\Model|null
+    */
+    public function model(array $row)
+    {
+        //$employee = Employee::find($row['employee_num']);
+        $employee = Employee::where('employee_no', $row['employee_num'])->first();
+        $epf = EmployeeFund::where('fund_name', 'epf')->first();
+        $etf = EmployeeFund::where('fund_name', 'etf')->first();
+        
+        $epfPercentage = ($epf->employee_percentage)*0.01*($employee->salary_group->salary);
+        $etfPercentage = ($etf->employee_percentage)*0.01*($employee->salary_group->salary);
+        
+        $ot =  ($employee->salary_group->ot_rate) * $row['ot_hours'];
+
+        $paye = 0;
+        if($employee->salary_group->salary > 100000){
+            $paye = ($employee->salary_group->salary) * 0.08;
+        }
+        $allowances = Allowance::where([['employee_id', '=',$row['employee_num']],['year', '=',$row['year']],['month', '=',$row['month']]])->sum('amount');
+        $deductions = Deduction::where([['employee_id', '=',$row['employee_num']],['year', '=',$row['year']],['month', '=',$row['month']]])->sum('amount');
+        $advances = Advance::where([['employee_id', '=',$row['employee_num']],['year', '=',$row['year']],['month', '=',$row['month']]])->sum('amount');
+        $total = ($employee->salary_group->salary) - $epfPercentage - $etfPercentage + $ot - $paye + $allowances - $deductions - $advances;
+        
+        return new EmployeeAttendance([
+            'employee_id'     => $row['employee_num'],
+            'attendance' => $row['attendance'],
+            'ot'        => $ot,
+            'ot_hours' => $row['ot_hours'],
+            'month'    => $row['month'], 
+            'year'  => $row['year'],
+            'approved' => false,
+            'paye' => $paye,
+            'allowances' => $allowances,
+            'deductions' => $deductions,
+            'advances' => $advances,
+            'epf' => $epfPercentage,
+            'etf' => $etfPercentage,
+            'total' => $total
+         ]);
+    }
+}

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Api\CalculatedSalResource;
 use Response;
+use DB;
 use App\EmployeeAttendance;
 
 class CalculatedSalController extends Controller
@@ -13,14 +14,19 @@ class CalculatedSalController extends Controller
     public function __construct()
     {
         $this->middleware('auth:api');
-        
+
     }
 
-    public function index():CalculatedSalResource
+    public function index()
     {
 
-        return new CalculatedSalResource(EmployeeAttendance::find(auth()->guard('api')->user()->id));
+       // return new CalculatedSalResource(EmployeeAttendance::find(auth()->guard('api')->user()->id));
 
+       $empattendance = DB::table('employee_salaries')
+       ->where('employee_id', '=', auth()->guard('api')->user()->id)
+       ->get();
+
+       return  $empattendance;
     }
 }
 

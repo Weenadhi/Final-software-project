@@ -37,7 +37,7 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
     </nav>
-    
+
   </header>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -52,29 +52,29 @@
         @show
         </div>
         <div class="pull-left info">
-        
+
         @section('names')
         @show
         <i class="fa fa-circle text-success"></i> Online</a>
-          
-          
+
+
         </div>
         <br/><br/>
       </div>
-      
+
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Actions</li>
         <!-- Optionally, you can add icons to the links -->
-        
+
         <li class="active">
           @section('homes')
           @show
-  
+
           <i class="fa fa-home"></i><span>Home</span></a></li>
-        
-        
+
+
         <li class="">
         @section('records')
         @show
@@ -89,7 +89,7 @@
         <li class="">
             @section('calander_event')
             @show
-    
+
             <i class="fa fa-calendar"></i> <span>Event management</span></a></li>
 
         <li class=""><a href="{{ route('logout') }}"
@@ -99,14 +99,14 @@
             @csrf
             </form>
         <i class="fa fa-sign-out"></i> <span>Sign-Out</span></a></li>
-        
+
       </ul>
 
-  
-                                       
-                                    
 
-                                   
+
+
+
+
 
       <!-- /.sidebar-menu -->
     </section>
@@ -115,7 +115,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    
+
       <section class="content">
 
             <div class="row">
@@ -123,8 +123,8 @@
                       <div class="box">
                         <div class="box-header">
                           <h3 class="box-title">Event List</h3>
-            
-        
+
+
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body table-responsive no-padding">
@@ -140,7 +140,7 @@
                                     <th>Update</th>
                                     <th>Delete</th>
                             </tr>
-                            
+
                             @section('cont')
                             @show
 
@@ -167,17 +167,17 @@
           <h3 class="modal-title pull-center" id="myModalLabel">Delete Confirmation</h3>
         </div>
         <div class="modal-body">
-            
-            <form action="/deleteevent" method="post">  
 
-            
+            <form action="/deleteevent" method="post">
+
+
                 {{ csrf_field() }}
                 <input type="hidden" name="_method" value="DELETE" />
-            
-            
+
+
             <p>This Action will delete the record from the database, Permenantly</p>
             <input type="hidden" name="empl_id" id="empl_id" value="">
-          
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">No,Close</button>
@@ -188,16 +188,17 @@
     </div>
   </div>
 
-          
+
 
 <footer class="main-footer">
 
-    <div class="pull-right hidden-xs">
-      Company Name Here
+<div class="pull-right hidden-xs">
+      Web payroll System
     </div>
-    
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+
+    <strong>Copyright &copy; 2019 <a href="#">Treinetic Company</a>.</strong> All rights reserved.
     </footer>
+
 
   <div class="control-sidebar-bg"></div>
 </div>
@@ -211,20 +212,20 @@
 <script>
 
       $('#deleteEvent').on('show.bs.modal', function (event) {
-        
+
         var button = $(event.relatedTarget) // Button that triggered the modal
         var getId = button.data("role") // Extract info from data-* attributes
         // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
         // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        
+
         var modal = $(this)
-        
+
         modal.find('.modal-body #empl_id').val(getId)
-        
+
       });
 
 
-      
+
 </script>
 
 

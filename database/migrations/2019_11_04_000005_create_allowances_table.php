@@ -15,6 +15,8 @@ class CreateAllowancesTable extends Migration
 
             $table->string('month');
 
+            $table->string('allowance_type');
+
             $table->decimal('amount', 15, 2);
 
             $table->timestamps();

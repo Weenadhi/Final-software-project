@@ -100,21 +100,21 @@
             </ul>
             </div>
         @endif
-        
+
 
             <div class="container">
-           
+
                 <form action="/import_attendances/import" enctype="multipart/form-data"  method="post">
                     @csrf
-                    
+
                     <input type="file" name="file"  style="margin-top: 10px" >
-                    
+
                     <input class="btn btn-primary" type ="submit" value = "Genarate Salary" style="margin-top: 10px">
-                   
+
                 </form>
-               
+
             </div>
-           
+
         </div>
 
     </div>
@@ -135,6 +135,9 @@
                         <th>Attended Dates</th>
                         <th>OT Hours</th>
                         <th>PAYE</th>
+                        <th>Allowances</th>
+                        <th>Deduction</th>
+                        <th>Advance</th>
                         <th>Salary</th>
                         <th>Approved</th>
                         @if( request('show_deleted') == 1 )
@@ -155,6 +158,10 @@
                                 <td >{{ $salary->attendance }}</td>
                                 <td >{{ $salary->ot_hours }}</td>
                                 <td >{{ $salary->paye}}</td>
+                                <td >{{ $salary->allowances}}</td>
+                                <td >{{ $salary->deductions}}</td>
+                                <td >{{ $salary->advances}}</td>
+
                                 <td >{{ $salary->total }}</td>
                                 <td >{{ $salary->approved }}</td>
 
@@ -163,15 +170,18 @@
                                     @if (Auth::user()->role[0]->name === "admin")
                                         <a href="{{ route('salaries.approve',[$salary->id]) }}" class="btn btn-xs btn-primary">Approve</a>
                                     @endif
-                                  
+
                                     <a href="{{ route('salaries.edit',[$salary->id]) }}" class="btn btn-xs btn-primary">Edit</a>
+                                    @if (Auth::user()->role[0]->name === "user")
                                     <a href="{{ route('salaries.salarysheet',[$salary->id]) }}" class="btn btn-xs btn-primary disabled">Salary Sheet</a>
-                                 
+                                    @endif
                                     @else
-                                    
+
                                     <a href="{{ route('salaries.approve',[$salary->id]) }}" class="btn btn-xs btn-primary disabled">Approve</a>
                                     <a href="{{ route('salaries.edit',[$salary->id]) }}" class="btn btn-xs btn-primary disabled">Edit</a>
+
                                     <a href="{{ route('salaries.salarysheet',[$salary->id]) }}" class="btn btn-xs btn-primary">Salary Sheet</a>
+
                                     @endif
                                 </td>
 

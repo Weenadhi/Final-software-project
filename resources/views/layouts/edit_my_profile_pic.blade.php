@@ -15,11 +15,11 @@
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  
-  
-  
+
+
+
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
 </head>
@@ -44,7 +44,7 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
     </nav>
-    
+
   </header>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -59,16 +59,16 @@
         @show
         </div>
         <div class="pull-left info">
-        
+
         @section('names')
         @show
         <i class="fa fa-circle text-success"></i> Online</a>
-          
-          
+
+
         </div>
         <br/><br/>
       </div>
-      
+
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -78,7 +78,7 @@
         <li class="">
           @section('homes')
           @show
-  
+
           <i class="fa fa-home"></i><span>Home</span></a></li>
 
         <li class="">
@@ -102,14 +102,14 @@
             @csrf
             </form>
         <i class="fa fa-sign-out"></i> <span>Sign-Out</span></a></li>
-        
+
       </ul>
 
-  
-                                       
-                                    
 
-                                   
+
+
+
+
 
       <!-- /.sidebar-menu -->
     </section>
@@ -133,7 +133,7 @@
   <section class="content" >
 
   <div class="">
-  
+
   <div class="row">
 
     <div class="col-sm-6" >
@@ -151,7 +151,7 @@
     @show
         @csrf
         <br><br>
-        
+
         <br><br>
         <div class="text-center">
           <h2 >Choose an image</h2>
@@ -159,7 +159,7 @@
 					<input type="submit" value="Apply" class="btn btn-primary">
           </div>
         <br>
-       
+
         </form>
     </div>
   </div>
@@ -168,15 +168,17 @@
   </div>
 
 
-  
+
   <footer class="main-footer">
 
-<div class="pull-right hidden-xs">
-  Company Name Here
-</div>
+  <div class="pull-right hidden-xs">
+      Web payroll System
+    </div>
 
-<strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
-</footer>
+    <strong>Copyright &copy; 2019 <a href="#">Treinetic Company</a>.</strong> All rights reserved.
+    </footer>
+
+
 
 
   <div class="control-sidebar-bg"></div>
@@ -191,7 +193,7 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 
@@ -241,7 +243,7 @@ h1 {
 	margin: 1em 0 0.5em 0;
 	color: #343434;
 	font-weight: normal;
-	font-family: 'Ultra', sans-serif;   
+	font-family: 'Ultra', sans-serif;
 	font-size: 36px;
 	line-height: 42px;
 	text-transform: uppercase;

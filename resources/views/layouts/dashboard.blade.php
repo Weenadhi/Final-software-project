@@ -42,7 +42,7 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
     </nav>
-    
+
   </header>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -57,29 +57,29 @@
         @show
         </div>
         <div class="pull-left info">
-        
+
         @section('names')
         @show
         <i class="fa fa-circle text-success"></i> Online</a>
-          
-          
+
+
         </div>
         <br/><br/>
       </div>
-      
+
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Actions</li>
         <!-- Optionally, you can add icons to the links -->
-        
+
         <li class="active">
           @section('homes')
           @show
-  
+
           <i class="fa fa-home"></i><span>Home</span></a></li>
-        
-        
+
+
         <li class="">
         @section('records')
         @show
@@ -91,10 +91,10 @@
 
         <i class="fa fa-user"></i> <span>My Profile</span></a></li>
 
-        
+
             @section('calander_event')
             @show
-            
+
         @yield('sidebarmenu')
         <li class=""><a href="{{ route('logout') }}"
             onclick="event.preventDefault();
@@ -104,14 +104,14 @@
             </form>
           <i class="fa fa-sign-out"></i> <span>Sign-Out</span></a>
         </li>
-        
+
       </ul>
 
-  
-                                       
-                                    
 
-                                   
+
+
+
+
 
       <!-- /.sidebar-menu -->
     </section>
@@ -120,12 +120,12 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    
+
       <section class="content">
 
 
 
-        
+
 <div class="row">
 <div class="col-md-6">
   <div class="box">
@@ -136,7 +136,7 @@
       <!-- tools box -->
       <div class="pull-right box-tools">
         <!-- button with a dropdown -->
-        
+
         <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
         </button>
         <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i>
@@ -144,10 +144,10 @@
       </div>
       <!-- /. tools -->
     </div>
-          
+
           <div class="box-body">
               <table class="table table-bordered">
-          
+
                 <tr>
                   <th style="width: 10px">#</th>
                   <th>Username</th>
@@ -160,7 +160,7 @@
               </table>
 
 </div>
-</div> 
+</div>
 </div>
 
 <div class="col-md-6">
@@ -173,7 +173,7 @@
           <!-- tools box -->
           <div class="pull-right box-tools">
             <!-- button with a dropdown -->
-            
+
             <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
             </button>
             <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i>
@@ -188,18 +188,18 @@
         </div>
         <!-- /.box-body -->
         <div class="box-footer text-black">
-          
+
             {!! $calendar->calendar() !!}
-            {!! $calendar->script() !!}  
-              
+            {!! $calendar->script() !!}
+
           </div>
-          
-             
-        </div>           
+
+
+        </div>
 
 
 
-</div>  
+</div>
 
 
 
@@ -211,10 +211,10 @@
 <footer class="main-footer">
 
     <div class="pull-right hidden-xs">
-      Company Name Here
+      Web payroll System
     </div>
-    
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+
+    <strong>Copyright &copy; 2019 <a href="#">Treinetic Company</a>.</strong> All rights reserved.
     </footer>
 
   <div class="control-sidebar-bg"></div>

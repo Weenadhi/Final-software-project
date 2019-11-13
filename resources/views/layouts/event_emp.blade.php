@@ -37,7 +37,7 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
     </nav>
-    
+
   </header>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -52,29 +52,29 @@
         @show
         </div>
         <div class="pull-left info">
-        
+
         @section('names')
         @show
         <i class="fa fa-circle text-success"></i> Online</a>
-          
-          
+
+
         </div>
         <br/><br/>
       </div>
-      
+
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Actions</li>
         <!-- Optionally, you can add icons to the links -->
-        
+
         <li class="active">
           @section('homes')
           @show
-  
+
           <i class="fa fa-home"></i><span>Home</span></a></li>
-        
-        
+
+
         <li class="">
         @section('records')
         @show
@@ -89,7 +89,7 @@
         <li class="">
             @section('calander_event')
             @show
-    
+
             <i class="fa fa-calendar"></i> <span>Event management</span></a></li>
 
         <li class=""><a href="{{ route('logout') }}"
@@ -99,14 +99,14 @@
             @csrf
             </form>
         <i class="fa fa-sign-out"></i> <span>Sign-Out</span></a></li>
-        
+
       </ul>
 
-  
-                                       
-                                    
 
-                                   
+
+
+
+
 
       <!-- /.sidebar-menu -->
     </section>
@@ -115,7 +115,7 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    
+
       <section class="content">
 
             <div class="row">
@@ -123,8 +123,8 @@
                       <div class="box">
                         <div class="box-header">
                           <h3 class="box-title">Event Participants</h3>
-            
-        
+
+
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body table-responsive no-padding">
@@ -132,9 +132,9 @@
                             <tr>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    
+
                             </tr>
-                            
+
                             @section('cont')
                             @show
 
@@ -152,17 +152,18 @@
 
 
 
-        
-          
+
+
 
 <footer class="main-footer">
 
-    <div class="pull-right hidden-xs">
-      Company Name Here
+<div class="pull-right hidden-xs">
+      Web payroll System
     </div>
-    
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+
+    <strong>Copyright &copy; 2019 <a href="#">Treinetic Company</a>.</strong> All rights reserved.
     </footer>
+
 
   <div class="control-sidebar-bg"></div>
 </div>
@@ -175,9 +176,9 @@
 
 <script>
 
-      
 
-      
+
+
 </script>
 
 

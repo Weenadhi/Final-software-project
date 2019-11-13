@@ -15,6 +15,8 @@ class CreateDeductionsTable extends Migration
 
             $table->string('month');
 
+            $table->string('deduction_type');
+
             $table->decimal('amount', 15, 2);
 
             $table->timestamps();

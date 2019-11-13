@@ -40,27 +40,39 @@
                     {!! Form::label('ot_hours', "OT hours", ['class' => 'control-label']) !!}
                     {!! Form::text('ot_hours', $employeeAttendance->ot_hours, ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
                     <p class="help-block"></p>
-
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-xs-12 form-group">
-                    {!! Form::label('attendance', "Attendance", ['class' => 'control-label']) !!}
-                    {!! Form::text('attendance', $employeeAttendance->attendance, ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
+                    {!! Form::label('allowances', "Allowances", ['class' => 'control-label']) !!}
+                    {!! Form::text('allowances', $employeeAttendance->allowances, ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
                     <p class="help-block"></p>
-                    @if($errors->has('last_name'))
-                        <p class="help-block">
-                            {{ $errors->first('last_name') }}
-                        </p>
-                    @endif
                 </div>
             </div>
+
+            <div class="row">
+            <div class="col-xs-12 form-group">
+                    {!! Form::label('deductions', "Deductions", ['class' => 'control-label']) !!}
+                    {!! Form::text('deductions', $employeeAttendance->deductions, ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
+                    <p class="help-block"></p>
+                </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs-12 form-group">
+                    {!! Form::label('advances', "Advances", ['class' => 'control-label']) !!}
+                    {!! Form::text('advances', $employeeAttendance->advances, ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
+                    <p class="help-block"></p>
+                </div>
+            </div>
+            {!! Form::submit(trans('quickadmin.qa_update'), ['class' => 'btn btn-danger']) !!}
+            {!! Form::close() !!}
             </div>
 
         </div>
     </div>
 
-    {!! Form::submit(trans('quickadmin.qa_update'), ['class' => 'btn btn-danger']) !!}
-    {!! Form::close() !!}
+
 @stop
 

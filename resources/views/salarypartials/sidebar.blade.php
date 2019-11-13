@@ -11,7 +11,7 @@
                     <span>Home</span>
                 </a>
             </li>
-            
+
             <li>
                 <a href="{{ route('user.records') }}">
                     <i class="fa fa-home"></i>
@@ -39,30 +39,30 @@
                     <span>Salary Groups</span>
                 </a>
             </li>
-            
+
             <li>
                 <a href="{{ route('employees.index') }}">
                     <i class="fa fa-user"></i>
                     <span>Employees</span>
                 </a>
             </li>
-            
-            
-            
+
+
+            @if (Auth::user()->role[0]->name === "admin")
             <li>
                 <a href="{{ route('employee_funds.index') }}">
                     <i class="fa fa-money"></i>
                     <span>Employee-funds</span>
                 </a>
             </li>
-            
+            @endif
             <li>
                 <a href="{{ route('salaries.index') }}">
                     <i class="fa fa-money"></i>
                     <span>Generate Salary</span>
                 </a>
             </li>
-            
+
 
                 <li class="{{ request()->is('admin/allowances') || request()->is('admin/allowances/*') ? 'active' : '' }}">
                     <a href="{{ route("allowances.index") }}">

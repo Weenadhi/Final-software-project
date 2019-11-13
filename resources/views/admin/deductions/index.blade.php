@@ -26,7 +26,7 @@
                                     <th width="10">
 
                                     </th>
-                                    
+
                                     <th>
                                         Employee Id
                                     </th>
@@ -42,9 +42,7 @@
                                     <th>
                                         amount
                                     </th>
-                                    <th>
-                                        Deduction type
-                                    </th>
+                                   
                                     <th>
                                         &nbsp;
                                     </th>
@@ -56,7 +54,7 @@
                                         <td>
 
                                         </td>
-                                       
+
                                         <td>
                                             {{ $deduction->employee->employee_no ?? '' }}
                                         </td>
@@ -73,25 +71,25 @@
                                             {{ $deduction->amount ?? '' }}
                                         </td>
                                         <td>
- 
+
                                                 <a class="btn btn-xs btn-primary" href="{{ route('deductions.show', $deduction->id) }}">
                                                     {{ trans('global.view') }}
                                                 </a>
 
 
-                     
+
                                                 <a class="btn btn-xs btn-info" href="{{ route('deductions.edit', $deduction->id) }}">
                                                     {{ trans('global.edit') }}
                                                 </a>
-    
 
-                        
+
+
                                                 <form action="{{ route('deductions.destroy', $deduction->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                     <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
                                                 </form>
-                         
+
 
                                         </td>
 

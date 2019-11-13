@@ -15,7 +15,7 @@ class EmployeeAttendance extends Model
     }
 
     /**
-     * Get the 
+     * Get the
      */
     public function employee()
     {

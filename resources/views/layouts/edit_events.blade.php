@@ -18,9 +18,9 @@
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
-  
+
   <link rel="stylesheet" href="../bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
- 
+
   <link rel="stylesheet" href="../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="../bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
@@ -28,7 +28,7 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-  
+
 
 
 </head>
@@ -53,7 +53,7 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
     </nav>
-    
+
   </header>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -68,16 +68,16 @@
         @show
         </div>
         <div class="pull-left info">
-        
+
         @section('names')
         @show
         <i class="fa fa-circle text-success"></i> Online</a>
-          
-          
+
+
         </div>
         <br/><br/>
       </div>
-      
+
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -87,7 +87,7 @@
         <li class="">
           @section('homes')
           @show
-  
+
           <i class="fa fa-home"></i><span>Home</span></a></li>
 
         <li class="">
@@ -104,7 +104,7 @@
         <li class="">
           @section('calander_event')
           @show
-  
+
           <i class="fa fa-calendar"></i> <span>Event management</span></a></li>
 
         <li class=""><a href="{{ route('logout') }}"
@@ -114,14 +114,14 @@
             @csrf
             </form>
         <i class="fa fa-sign-out"></i> <span>Sign-Out</span></a></li>
-        
+
       </ul>
 
-  
-                                       
-                                    
 
-                                   
+
+
+
+
 
       <!-- /.sidebar-menu -->
     </section>
@@ -133,7 +133,7 @@
   <section class="content-header">
 
     <h1 class="text-center">Update Event</h1>
-  
+
   </section>
   <section class="content" >
 
@@ -144,15 +144,16 @@
   </div>
 
 
-  
+
   <footer class="main-footer">
 
-<div class="pull-right hidden-xs">
-  Company Name Here
-</div>
+  <div class="pull-right hidden-xs">
+      Web payroll System
+    </div>
 
-<strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
-</footer>
+    <strong>Copyright &copy; 2019 <a href="#">Treinetic Company</a>.</strong> All rights reserved.
+    </footer>
+
 
 
   <div class="control-sidebar-bg"></div>
@@ -204,7 +205,7 @@ h1 {
 	margin: 1em 0 0.5em 0;
 	color: #343434;
 	font-weight: normal;
-	font-family: 'Ultra', sans-serif;   
+	font-family: 'Ultra', sans-serif;
 	font-size: 36px;
 	line-height: 42px;
 	text-transform: uppercase;

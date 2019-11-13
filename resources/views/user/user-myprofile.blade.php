@@ -39,14 +39,14 @@
 
     <a href="{{route('user.home')}}" class="site-btn">BACK</a>
     <a href="{{route('logout')}}" class="site-btn">LOGOUT</a>
-                
+
 @endsection
 
 @section('general_info')
     @foreach($data4 as $emp)
     <div class="hero-text">
         <h2>{{$emp->first_name}} {{$emp->last_name}}</h2>
-        
+
     </div>
     <div class="hero-info">
         <h2>General Information</h2>
@@ -58,7 +58,7 @@
             <li><span>Phone Number : </span>{{$emp->phoneNumber}}</li>
         </ul>
         <br/>
-        
+
     @endforeach
 @endsection
 
@@ -70,10 +70,10 @@
                 <li><span>Current Branch : </span>{{$emp2->obranch}}</li>
                 <li><span>Department : </span>{{$emp2->dept}}</li>
                 <li><span>Designation : </span>{{$emp2->des}}</li>
-                
+
             </ul>
             <br/>
-            
+
         @endforeach
 @endsection
 
@@ -93,14 +93,13 @@
 @foreach($data6 as $emp3)
         <h2>Financial Information</h2>
         <ul>
-            <li><span>Salary Group : </span>{{$emp3->sal_grp}}</li>
-            <li><span>EPF Number : </span>{{$emp3->epf_no}}</li>
+          
             <li><span>Bank             : </span>{{$emp3->bank}}</li>
             <li><span>Branch           : </span>{{$emp3->bbranch}}</li>
             <li><span>Account Number   : </span>{{$emp3->acc}}</li>
         </ul>
         <br/>
-        
+
         @endforeach
 @endsection
 

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Employee;
 use App\EmployeeAttendance;
 use App\EmployeeFund;
@@ -20,7 +21,7 @@ class SalaryController extends Controller
      */
     public function index()
     {
-        
+
         $salaries = EmployeeAttendance::all();
         return view('admin.salaries.index', compact('salaries'));
     }
@@ -72,7 +73,15 @@ class SalaryController extends Controller
         \Log::info($data['ot_hours']);
         \Log::info($employee->salary_group->ot_rate);
         $ot =  ($employee->salary_group->ot_rate) *$data['ot_hours'];
-        $total = ($employee->salary_group->salary) - $epfPercentage - $etfPercentage + $ot;
+
+        $paye = 0;
+        if($employee->salary_group->salary > 100000){
+            $paye = ($employee->salary_group->salary) * 0.08;
+        }
+
+        $total = ($employee->salary_group->salary) - $epfPercentage - $etfPercentage + $ot + $data['allowances'] - $data['deductions'] - $data['advances'] - $paye;
+
+
 
         $data['ot'] = $ot;
         $data['total'] = $total;

@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">    
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
 </head>
@@ -28,13 +28,13 @@
 
 
     <a href="#" class="logo">
-      
+
       <span class="logo-mini"><b>@yield('utypemin')</b>CP</span>
       <span class="logo-lg"><small><b>@yield('utype') </b>Control Panel</small></span>
 
     </a>
 
-    
+
     <nav class="navbar navbar-static-top" role="navigation">
 
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -42,10 +42,10 @@
       </a>
 
     </nav>
-    
+
   </header>
   <!-- Left side column. contains the logo and sidebar -->
-  
+
   <aside class="main-sidebar">
 
     <!-- sidebar: style can be found in sidebar.less -->
@@ -58,16 +58,16 @@
         @show
         </div>
         <div class="pull-left info">
-        
+
         @section('names')
         @show
         <i class="fa fa-circle text-success"></i> Online</a>
-          
-          
+
+
         </div>
         <br/><br/>
       </div>
-      
+
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -78,7 +78,7 @@
         <li class="">
          @section('homes')
          @show
- 
+
          <i class="fa fa-home"></i><span>Home</span></a></li>
 
         <li class="active">
@@ -102,10 +102,10 @@
             @csrf
             </form>
         <i class="fa fa-sign-out"></i> <span>Sign-Out</span></a></li>
-        
+
       </ul>
 
-  
+
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
@@ -133,20 +133,20 @@
 
   <div >
    <div class="all">
-      
+
 
    @section('form_part')
    @show
    {{csrf_field()}}
-       
+
        <div class="all table table-striped">
           <div>
              <div class="row">
                 <!--Official Information begin-->
              <div class="col-sm-6">
-                
+
                       <fieldset>
-                        
+
                <div class="text-center">
                   <div class="page-header">
                   <h4><b>Official Informations</b><small>(Mandatory)</small></h4>
@@ -250,14 +250,14 @@
                          </div>
 
                     </fieldset>
-                   
+
                     </div>
                      <!--Official Information end-->
 
                      <div class="col-sm-6">
 
                     <!--Financial Information begin -->
-                    
+
                      <fieldset>
 
                      <div class="text-center">
@@ -290,11 +290,11 @@
                                    @endforeach
                                  </select>
                               </div>
-                              
+
                            </div>
                         </div>
-                           
-                         
+
+
 
                          <div class="form-group">
                             <label class="col-md-4 control-label">Is OT Pay Allowed</label>
@@ -367,23 +367,23 @@
                                 @endif
                             </div>
                          </div>
-                        
+
                          </fieldset>
-                        
+
                         </div>
 
-                    
+
                     </div>
                    <!--fina ennd-->
-                    
+
                     <div class="row">
                     <div class="col-sm-6">
-                                       
+
                      <!--Basic info begin-->
 
-                        
+
                       <fieldset>
-                     
+
                       <div class="text-center">
                         <div class="page-header">
                         <h4><b>Basic Informations</b><small>(optional)</small></h4>
@@ -402,7 +402,7 @@
                                <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input id="last_name" name="last_name" placeholder="Last Name" class="form-control"  value="" type="text"></div>
                             </div>
                          </div>
-                         
+
                          <div class="form-group">
                             <label class="col-md-4 control-label">Date Of Birth</label>
                             <div class="col-md-8 inputGroupContainer">
@@ -436,8 +436,8 @@
                                </div>
                             </div>
                          </div>
-                         
-                         
+
+
                          <div class="form-group">
                             <label class="col-md-4 control-label">Phone Number</label>
                             <div class="col-md-8 inputGroupContainer">
@@ -445,17 +445,17 @@
                             </div>
                          </div>
                       </fieldset>
-                   
+
 
                 </div>
 
                 <!--Basic info end-->
-                
+
                 <!--financial info end-->
 
                    <div class="col-sm-6">
                     <!--Security Information begin-->
-                   
+
                       <fieldset>
 <center>
 <div class="page-header">
@@ -489,38 +489,39 @@
 
                          </div>
                         <div class="text-center text-bottom">
-                        
+
                         <button type="submit" class="btn btn-success">Register</button>
 
                         </div>
 
                          </fieldset>
-                         
+
                       <!--Security Information end-->
                       </div>
-                
+
                 </div>
-                
+
           </div>
        </div>
-   
+
     </form>
-    
+
 </div>
 
   </section>
   </div>
 
 
-  
+
   <footer class="main-footer">
 
-         <div class="pull-right hidden-xs">
-         Company Name Here
-         </div>
+  <div class="pull-right hidden-xs">
+      Web payroll System
+    </div>
 
-         <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
-  </footer>
+    <strong>Copyright &copy; 2019 <a href="#">Treinetic Company</a>.</strong> All rights reserved.
+    </footer>
+
 
 
   <div class="control-sidebar-bg"></div>
@@ -535,7 +536,7 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 

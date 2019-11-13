@@ -15,12 +15,12 @@
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  
-  
-  
+
+
+
   <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
-  
-  
+
+
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
 
@@ -46,7 +46,7 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
     </nav>
-    
+
   </header>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -61,28 +61,28 @@
         @show
         </div>
         <div class="pull-left info">
-        
+
         @section('names')
         @show
         <i class="fa fa-circle text-success"></i> Online</a>
-          
-          
+
+
         </div>
         <br/><br/>
       </div>
-      
+
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Actions</li>
         <!-- Optionally, you can add icons to the links -->
-        
+
         <li class="">
           @section('homes')
           @show
-  
+
           <i class="fa fa-home"></i><span>Home</span></a></li>
-        
+
         <li class="active">
         @section('records')
         @show
@@ -104,14 +104,14 @@
             @csrf
             </form>
         <i class="fa fa-sign-out"></i> <span>Sign-Out</span></a></li>
-        
+
       </ul>
 
-  
-                                       
-                                    
 
-                                   
+
+
+
+
 
       <!-- /.sidebar-menu -->
     </section>
@@ -125,15 +125,15 @@
   </section>
   <section class="content">
   <div class='whole '>
-        
-        
+
+
         <div class="pos-1">
-        
+
         <div class="container">
         <div class="row justify-content-center">
         <div class="col-md-11">
             <div class="card">
-                
+
 
                 <div class="card-body">
                     <table class="table-responsive"  id='unseen'>
@@ -144,15 +144,15 @@
                 <th class="priority-3">Edit</th>
                 <th class="priority-4">Accessability</th>
                 <th class="priority-5">Delete</th>
-                
 
-                
-                
+
+
+
             </tr>
                     </thead>
                     <tbody>
                     @section('eachraw')
-					
+
                     @show
 					</tbody>
 
@@ -162,7 +162,7 @@
                 </div>
 				<br/><br/>
                 @section('ngv')
-                
+
                 @show
 
                 <!-- Modal -->
@@ -174,16 +174,16 @@
         <h3 class="modal-title pull-center" id="myModalLabel">Delete Confirmation</h3>
       </div>
       <div class="modal-body">
-          
+
           @section('delpath')
-          
+
           @show
-          
+
           {{ csrf_field() }}
           {{ method_field('delete') }}
           <p>This Action will delete the record from the database, Permenantly</p>
           <input type="hidden" name="empl_id" id="empl_id" value="">
-        
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">No,Close</button>
@@ -204,36 +204,36 @@
                           <h3 class="modal-title pull-center" id="myModalLabelacc"></h3>
                         </div>
                         <div class="modal-body">
-                            
+
                             <p id="acclvl"></p>
 
                             @section('accpath')
                             @show
-                            
+
                             {{ csrf_field() }}
-                            
-                            
+
+
                             <input type="hidden" name="empl_id" id="empl_id" value="">
                             <input type="hidden" name="acc_status" id="acc_status" value="">
-                            
+
 
 
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">No,Close</button>
                           <button type="submit" class="btn btn-primary" id="levels" name="xasc"></button>
-                          
-                              
+
+
                           @show
-                          
-                        
+
+
                         </div>
                     </form>
                       </div>
                     </div>
                   </div>
                   <!--END MODEL-->
-                        
+
 				</div>
             </div>
         </div>
@@ -247,12 +247,13 @@
 
   <footer class="main-footer">
 
-<div class="pull-right hidden-xs">
-  Company Name Here
-</div>
+  <div class="pull-right hidden-xs">
+      Web payroll System
+    </div>
 
-<strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
-</footer>
+    <strong>Copyright &copy; 2019 <a href="#">Treinetic Company</a>.</strong> All rights reserved.
+    </footer>
+
 
 
 
@@ -274,35 +275,35 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  
+
   <script>
       $('#myModal').on('show.bs.modal', function (event) {
-        
+
         var button = $(event.relatedTarget) // Button that triggered the modal
         var getId = button.data("role") // Extract info from data-* attributes
         // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
         // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        
+
         var modal = $(this)
-        
+
         modal.find('.modal-body #empl_id').val(getId)
-        
+
       });
 
       $('#accessability').on('show.bs.modal', function (event) {
-        
+
         var button = $(event.relatedTarget) // Button that triggered the modal
         var getId = button.data("role")
-        var getCurrentStatues = button.data("curst") 
-        
+        var getCurrentStatues = button.data("curst")
+
 
         if(getCurrentStatues == 0){
-          
+
           $("#levels").text("Block");
           $("#myModalLabelacc").text("Confirm For Access Denite");
           $("#acclvl").text("Do You Want to Block the access?");
 
-          
+
         }else{
           $("#levels").text("Unlock");
           $("#myModalLabelacc").text("Confirm For Access Permission");
@@ -312,17 +313,17 @@
          // Extract info from data-* attributes
         // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
         // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        
+
         var modal = $(this)
-        
+
         modal.find('.modal-body #empl_id').val(getId)
         //modal.find('.modal-body #acc_status').val(getCurrentStatues)
-        
+
       });
 
 
       </script>
-  
+
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
@@ -332,7 +333,7 @@
 <script>
 $(document).ready( function () {
     $('#unseen').DataTable();
-    
+
     responsive: true;
 } );
 
@@ -344,14 +345,14 @@ $(document).ready( function () {
 
 <style>
 .play{
-  
+
 
 }
 h4 {
 	margin: 1em 0 0.5em 0;
 	color: #343434;
 	font-weight: normal;
-	font-family: 'Ultra', sans-serif;   
+	font-family: 'Ultra', sans-serif;
 	font-size: 36px;
 	line-height: 42px;
 	text-transform: uppercase;
@@ -359,23 +360,23 @@ h4 {
 }
 .all{
     margin:0;
-    padding:0; 
+    padding:0;
     width:1100px;
-    
+
 }
 
 
-	
+
 
   /* Large desktop */
 @media (min-width: 1200px) {
 
-  
+
 
  }
 
 /* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
+@media (min-width: 768px) and (max-width: 979px) {
 
   .priority-5{
 			display:none;
@@ -388,7 +389,7 @@ h4 {
  }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
 
   .priority-5{
 			display:none;
@@ -400,7 +401,7 @@ h4 {
  }
 
 /* Landscape phones and down */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
 
 
   .priority-5{
@@ -414,10 +415,10 @@ h4 {
 		}
 
  }
-	
-	
 
- 
+
+
+
 
 </style>
 </html>

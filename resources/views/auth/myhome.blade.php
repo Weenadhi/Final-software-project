@@ -31,9 +31,9 @@
                     <div class="banner_text">
                         <div class="banner_text_iner">
                             <h1>Welcome
-                                to <span>Treintec</span> Technologies</h1>
+                                to <span>Treinetic</span> Technologies</h1>
                             <p>
-                              Better software Solutions
+                             The Place Where Idea come to life
                             </p>
                             <a href="{{route('contactus')}}" class="btn_1">More Details </a>
                         </div>

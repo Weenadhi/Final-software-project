@@ -14,17 +14,17 @@
   <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
-  
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
-    
+
     <link rel="stylesheet" href="../css/owl.carousel.css"/>
     <link rel="stylesheet" href="../css/magnific-popup.css"/>
     <link rel="stylesheet" href="../css/style.css"/>
-  
- 
+
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-  
+
   <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
 
@@ -51,7 +51,7 @@
         <span class="sr-only">Toggle navigation</span>
       </a>
     </nav>
-    
+
   </header>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
@@ -66,16 +66,16 @@
         @show
         </div>
         <div class="pull-left info">
-        
+
         @section('names')
         @show
         <i class="fa fa-circle text-success"></i> Online</a>
-          
-          
+
+
         </div>
         <br/><br/>
       </div>
-      
+
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
@@ -85,7 +85,7 @@
         <li class="">
           @section('homes')
           @show
-  
+
           <i class="fa fa-home"></i><span>Home</span></a></li>
 
         <li class="">
@@ -109,14 +109,14 @@
             @csrf
             </form>
         <i class="fa fa-sign-out"></i> <span>Sign-Out</span></a></li>
-        
+
       </ul>
 
-  
-                                       
-                                    
 
-                                   
+
+
+
+
 
       <!-- /.sidebar-menu -->
     </section>
@@ -129,24 +129,24 @@
   <section class="content-header ">
 
     <center>
-  @section('heading')             
- 
+  @section('heading')
+
   @show
     </center>
   </section>
 
   <section class="content">
-  
+
   <div id="preloder">
 		<div class="loader"></div>
 	</div>
-	
-	
+
+
 	<header class="header-section">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-4">
-					
+
 				</div>
 				<div class="col-md-8 text-md-right header-buttons">
                 @section('header')
@@ -162,7 +162,7 @@
 				<div class="col-xl-10 offset-xl-1">
 					<div class="row">
 						<div class="col-lg-6">
-							
+
                             @section('general_info')
                             @show
 							</div>
@@ -189,9 +189,9 @@
 			</div>
 		</div>
 	</section>
-	
 
-	
+
+
 
 </section>
   </div>
@@ -199,12 +199,13 @@
 
   <footer class="main-footer">
 
-<div class="pull-right hidden-xs">
-  Company Name Here
-</div>
+  <div class="pull-right hidden-xs">
+      Web payroll System
+    </div>
 
-<strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
-</footer>
+    <strong>Copyright &copy; 2019 <a href="#">Treinetic Company</a>.</strong> All rights reserved.
+    </footer>
+
 
 
 
@@ -236,14 +237,14 @@
 
 <style>
 .play{
-  
+
 
 }
 h4 {
 	margin: 1em 0 0.5em 0;
 	color: #343434;
 	font-weight: normal;
-	font-family: 'Ultra', sans-serif;   
+	font-family: 'Ultra', sans-serif;
 	font-size: 36px;
 	line-height: 42px;
 	text-transform: uppercase;
@@ -251,9 +252,9 @@ h4 {
 }
 .all{
     margin:0;
-    padding:0; 
+    padding:0;
     width:1100px;
-    
+
 }
 
 @media screen and (max-width: 767px) {
@@ -263,7 +264,7 @@ h4 {
 }
 
 .pos-1{
-    
+
 
 }
 </style>

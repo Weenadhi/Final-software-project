@@ -59,7 +59,7 @@
 @section('basic')
 			@foreach($data1 as $emp)
 				<h2>{{$emp->first_name}} {{$emp->last_name}}</h2>
-				
+
 			</div>
 			<div class="hero-info">
 				<h2>General Information</h2>
@@ -86,7 +86,7 @@
 					<li><span>Current Branch : </span>{{$emp2->obranch}}</li>
 					<li><span>Department : </span>{{$emp2->dept}}</li>
 					<li><span>Designation : </span>{{$emp2->des}}</li>
-					
+
 				</ul>
 				<br/>
 				<div>
@@ -107,8 +107,7 @@
 			@foreach($data3 as $emp3)
 			<h2>Financial Information</h2>
 			<ul>
-				<li><span>Salary Group : </span>{{$emp3->sal_grp}}</li>
-            	<li><span>EPF Number : </span>{{$emp3->epf_no}}</li>
+				
 				<li><span>Bank             : </span>{{$emp3->bank}}</li>
 				<li><span>Branch           : </span>{{$emp3->bbranch}}</li>
 				<li><span>Account Number   : </span>{{$emp3->acc}}</li>
@@ -129,35 +128,35 @@
                     <span>Salary Groups</span>
                 </a>
             </li>
-            
+
             <li>
                 <a href="{{ route('employees.index') }}">
                     <i class="fa fa-user"></i>
                     <span>Employees</span>
                 </a>
             </li>
-            
+
             <li>
                 <a href="{{ route('import_attendances.index') }}">
                     <i class="fa fa-calendar"></i>
                     <span>Generate Salary</span>
                 </a>
             </li>
-            
+
             <li>
                 <a href="{{ route('employee_funds.index') }}">
                     <i class="fa fa-money"></i>
                     <span>Employee-funds</span>
                 </a>
             </li>
-            
+
             <li>
                 <a href="{{ route('salaries.index') }}">
                     <i class="fa fa-money"></i>
                     <span>Salaries</span>
                 </a>
             </li>
-            
+
 
                 <li class="{{ request()->is('admin/allowances') || request()->is('admin/allowances/*') ? 'active' : '' }}">
                     <a href="{{ route("allowances.index") }}">

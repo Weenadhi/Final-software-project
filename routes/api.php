@@ -27,6 +27,8 @@ Route::apiResource('/api_admins','Api\AllAdminController');
 
 Route::apiResource('/event','Api\CalenderController');
 
+Route::apiResource('/funds','Api\ShowFundController');
+
 Route::get('/user/image','Api\UserDetailController@getProfilePic');
 
 Route::post('/user/update_image','Api\UserDetailController@updateProfilePic');
@@ -34,9 +36,9 @@ Route::post('/user/update_image','Api\UserDetailController@updateProfilePic');
 /*
 Personal access client created successfully.
 Client ID: 1
-Client secret: ufhgrCQkt5VP1OrD1FiZHTuH1uJx9Q0h7dcYJ1Il
+Client secret: gVCgFb93AFt23qZO3GA6CRCokYNpYTXnu8xlH06p
 Password grant client created successfully.
 Client ID: 2
-Client secret: nTgFIbDBD7Xbko7njne93wYRmOOOVAvCfVPfRlOC
+Client secret: kSAtzf1dx6zsDNhUUFURE2nZw2GPKDYWVZMdHzH5
 
-*/ 
+*/

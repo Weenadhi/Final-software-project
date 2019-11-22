@@ -30,7 +30,7 @@ class EmployeeDepartment extends Migration
             array(
                 'department' => 'Develop',
                 
-            ),
+            )
 
         );
 
@@ -38,7 +38,7 @@ class EmployeeDepartment extends Migration
             array(
                 'department' => 'Testing',
                 
-            ),
+            )
 
         );
 
@@ -46,7 +46,7 @@ class EmployeeDepartment extends Migration
             array(
                 'department' => 'Financial',
                 
-            ),
+            )
 
         );
 
@@ -54,7 +54,7 @@ class EmployeeDepartment extends Migration
             array(
                 'department' => 'Operational',
                 
-            ),
+            )
 
         );
 
@@ -62,7 +62,7 @@ class EmployeeDepartment extends Migration
             array(
                 'department' => 'Research',
                 
-            ),
+            )
 
         );
 
@@ -70,7 +70,7 @@ class EmployeeDepartment extends Migration
             array(
                 'department' => 'other',
                 
-            ),
+            )
 
         );
 

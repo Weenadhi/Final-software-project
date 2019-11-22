@@ -21,7 +21,7 @@ class ImportAttendancesController extends Controller
     }
     public function store(){
         $data=request()->validate([
-
+            
             'file'=>['required','file'],
         ]);
           

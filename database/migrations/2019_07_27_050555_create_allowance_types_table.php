@@ -23,7 +23,7 @@ class CreateAllowanceTypesTable extends Migration
             array(
                 'allowance_type' => 'Travelling',
                 
-            ),
+            )
 
         );
 
@@ -31,7 +31,7 @@ class CreateAllowanceTypesTable extends Migration
             array(
                 'allowance_type' => 'Meals',
                 
-            ),
+            )
 
         );
     }

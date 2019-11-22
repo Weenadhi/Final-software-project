@@ -10,12 +10,35 @@
                     New Allowance
                 </div>
                 <div class="panel-body">
-
                     <form action="{{ route("allowances.store") }}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        <div class="form-group {{ $errors->has('employee_id') ? 'has-error' : '' }}">
+                        @csrf                  
+                        <div class="form-group">
+                            <label for="allowance_for">Allowance Type*</label>
+                            <select name="allowance_for" id="allowance_for" class="form-control" onchange="showHideEntry()" required>                               
+                                <option value="Fixed">Fixed allowance</option>  
+                                <option value="group_allowance">Group allowance</option> 
+                                <option value="individual_allowance">Individual allowance</option>                           
+                            </select>                            
+                        </div>
+
+                        <div id="showHideSalary" class="form-group {{ $errors->has('salary_group') ? 'has-error' : '' }}" style="display: none">
+                            <label for="salary">Salary Group*</label>                           
+                            <select name="salary_group" id="salary" class="form-control">
+                            <option value="Please select">Please select </option>
+                                @foreach($salary_groups as $id => $salary_group)
+                                    <option value="{{ $salary_group->name }}"  {{ isset($allowance) ? 'selected' : '' }}>{{ $salary_group->name }}</option>
+                                @endforeach
+                            </select>
+                            @if($errors->has('salary_group'))
+                                <p class="help-block">
+                                    {{ $errors->first('salary_group') }}
+                                </p>
+                            @endif
+                        </div>      
+                        
+                        <div id="showHideEmployeeNo" class="form-group {{ $errors->has('employee_id') ? 'has-error' : '' }}" style="display: none">
                             <label for="employee">Employee No*</label>
-                            <select name="employee_id" id="employee" class="form-control select2" required>
+                            <select name="employee_id" id="employee" class="form-control">                                
                                 @foreach($employees as $id => $employee)
                                     <option value="{{ $id }}" {{ (isset($allowance) && $allowance->employee ? $allowance->employee->id : old('employee_id')) == $id ? 'selected' : '' }}>{{ $employee }}</option>
                                 @endforeach
@@ -78,7 +101,30 @@
                             <input class="btn btn-danger" type="submit" value="Save">
                         </div>
                     </form>
+                    <script>
+                        function showHideEntry() {
+                            var sal_group = document.getElementById("allowance_for").value;
+                            var salary_entries = document.getElementById("showHideSalary");
+                            var employee_entries = document.getElementById("showHideEmployeeNo");                      
 
+                            if (sal_group == "Fixed"){
+                                salary_entries.style.display = "None";
+                                employee_entries.style.display = "None";
+                            }
+                            else if(sal_group == "group_allowance"){
+                                salary_entries.style.display = "inline";
+                                employee_entries.style.display = "None";
+                            }
+                            else if(sal_group == "individual_allowance"){
+                                salary_entries.style.display = "None";
+                                employee_entries.style.display = "inline";                 
+                            }
+                            else{
+                                alert(dop);
+                            }
+                            
+                        }
+                    </script>
 
                 </div>
             </div>

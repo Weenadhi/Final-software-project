@@ -23,7 +23,7 @@ class CreateLeaveTypesTable extends Migration
             array(
                 'leave_type' => 'Casual',
                 
-            ),
+            )
 
         );
 
@@ -31,7 +31,7 @@ class CreateLeaveTypesTable extends Migration
             array(
                 'leave_type' => 'Annual',
                 
-            ),
+            )
 
         );
 
@@ -39,7 +39,7 @@ class CreateLeaveTypesTable extends Migration
             array(
                 'leave_type' => 'Sick',
                 
-            ),
+            )
 
         );
     }

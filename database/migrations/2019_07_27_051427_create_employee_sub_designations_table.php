@@ -23,7 +23,7 @@ class CreateEmployeeSubDesignationsTable extends Migration
             array(
                 'sub_designation' => 'Team Manager',
                 
-            ),
+            )
 
         );
 
@@ -31,7 +31,7 @@ class CreateEmployeeSubDesignationsTable extends Migration
             array(
                 'sub_designation' => 'Project Engineer',
                 
-            ),
+            )
 
         );
     }

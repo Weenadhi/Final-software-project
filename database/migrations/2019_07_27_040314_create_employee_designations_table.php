@@ -30,7 +30,7 @@ class CreateEmployeeDesignationsTable extends Migration
             array(
                 'designation' => 'COO',
                 
-            ),
+            )
 
         );
 
@@ -38,7 +38,7 @@ class CreateEmployeeDesignationsTable extends Migration
             array(
                 'designation' => 'Director',
                 
-            ),
+            )
 
         );
 
@@ -46,7 +46,7 @@ class CreateEmployeeDesignationsTable extends Migration
             array(
                 'designation' => 'HR Manager',
                 
-            ),
+            )
 
         );
 
@@ -54,7 +54,7 @@ class CreateEmployeeDesignationsTable extends Migration
             array(
                 'designation' => 'HR Executive',
                 
-            ),
+            )
 
         );
 
@@ -62,7 +62,7 @@ class CreateEmployeeDesignationsTable extends Migration
             array(
                 'designation' => 'Software Engineer',
                 
-            ),
+            )
 
         );
 
@@ -70,7 +70,7 @@ class CreateEmployeeDesignationsTable extends Migration
             array(
                 'designation' => 'ASE',
                 
-            ),
+            )
 
         );
 
@@ -78,7 +78,7 @@ class CreateEmployeeDesignationsTable extends Migration
             array(
                 'designation' => 'QA',
                 
-            ),
+            )
 
         );
     }

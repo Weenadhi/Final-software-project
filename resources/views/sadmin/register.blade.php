@@ -28,6 +28,7 @@
 
 @section('form_part')
    <form class="well form-horizontal" action="{{route('sadmin.registers')}}" method="POST">
+ 
 @endsection
 
 @section('backs')

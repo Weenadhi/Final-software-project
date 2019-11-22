@@ -19,37 +19,37 @@ class CreateRolesTable extends Migration
             $table->timestamps();
         });
 
-        DB::table('roles')->insert(
+       DB::table('roles')->insert(
             array(
                 'name' => 'super_admin',
                 
-            ),
+            )
 
         );
-
+ 
         DB::table('roles')->insert(
             array(
                 'name' => 'admin',
                 
-            ),
+            )
 
         );
-
+ 
         DB::table('roles')->insert(
             array(
                 'name' => 'user',
                 
-            ),
+            )
 
         );
-
+ 
         DB::table('roles')->insert(
             array(
                 'name' => 'employee',
                 
-            ),
+            )
 
-        );
+        ); 
     }
 
     /**

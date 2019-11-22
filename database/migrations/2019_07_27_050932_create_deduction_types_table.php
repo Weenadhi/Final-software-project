@@ -23,7 +23,7 @@ class CreateDeductionTypesTable extends Migration
             array(
                 'deduction_type' => 'Travelling',
                 
-            ),
+            )
 
         );
 
@@ -31,7 +31,7 @@ class CreateDeductionTypesTable extends Migration
             array(
                 'deduction_type' => 'Meals',
                 
-            ),
+            )
 
         );
     }

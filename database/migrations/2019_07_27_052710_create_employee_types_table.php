@@ -23,7 +23,7 @@ class CreateEmployeeTypesTable extends Migration
             array(
                 'employee_type' => 'Full Time',
                 
-            ),
+            )
 
         );
 
@@ -31,7 +31,7 @@ class CreateEmployeeTypesTable extends Migration
             array(
                 'employee_type' => 'Part Time',
                 
-            ),
+            )
 
         );
 
@@ -39,7 +39,7 @@ class CreateEmployeeTypesTable extends Migration
             array(
                 'employee_type' => 'Intern',
                 
-            ),
+            )
 
         );
 
@@ -47,7 +47,7 @@ class CreateEmployeeTypesTable extends Migration
             array(
                 'employee_type' => 'Contractor',
                 
-            ),
+            )
 
         );
     }

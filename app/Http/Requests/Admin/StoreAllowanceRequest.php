@@ -16,11 +16,7 @@ class StoreAllowanceRequest extends FormRequest
 
     public function rules()
     {
-        return [
-            'employee_id' => [
-                'required',
-                'integer',
-            ],
+        return [          
             'month'       => [
                 'required',
             ],
